@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <record model="ir.ui.view" id="abvo_res_partner_form">
-        <field name="name">abvo.res.partner.form</field>
-        <field name="model">res.partner</field>
-        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="name">fsm_equipment.form</field>
+        <field name="model">fsm.equipment</field>
+        <field name="inherit_id" ref="base.view_fsm.equipment_form" />
         <field name="priority">200</field>
         <field name="arch" type="xml">
-            <field name="cnpj_cpf" position="replace"/>
+            <field name="lot_it" position="replace"/>
             <xpath expr="//h1" position="after">
-                <group attrs="{'invisible':[('is_boat', '!=', True)]}">
-                    <field name="is_boat" invisible="1"/>
-                    <field name="boat_owner_id"/>
-                    <field name="estaleiro"/>
-                    <field name="modelo"/>
-                    <field name="loa"/>
+                <group attrs="{'invisible':[('is_equipment', '!=', True)]}">
+                    <field name="is_equipment" invisible="1"/>
+                    <field name="location_id"/>
+                    <field name="current_location_id"/>
+                    <field name="owned_by_id"/>
+                    <field name="managed_by_id"/>
                     <field name="deslocamento"/>
-                    <field name="numeral"/>
-                    <field name="club_id"/>
+                    <field name="name"/>
+                    <field name="stage_id"/>
                 </group>
             </xpath>
 
             <xpath expr="//sheet/group[1]" position="attributes">
-                <attribute name="attrs">{'invisible':[('is_boat', '=', True)]}</attribute>
+                <attribute name="attrs">{'invisible':[('is_fsm.equipment', '=', True)]}</attribute>
             </xpath>
 
             <xpath expr="//page[last()]" position="after">
-                <page string="Certificados" name="certificates" attrs="{'invisible':[('is_boat', '!=', True)]}">
+                <page string="Certificados" name="certificates" attrs="{'invisible':[('is_fsm.equipment', '!=', True)]}">
                     <group name="certificates" col="2">
                         <group col="2">
                         <field name="certificates_lines" attrs="{'readonly':False}" nolabel="1" colspan="2">
