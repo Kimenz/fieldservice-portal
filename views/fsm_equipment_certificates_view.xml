@@ -1,13 +1,13 @@
 <odoo>
   <data>
     <record id="abvo_certificates_form" model="ir.ui.view" >
-      <field name="name">abvo.certificates.form</field>
-      <field name="model">abvo.certificates</field>
+      <field name="name">fsm_equipment.certificates.form</field>
+      <field name="model">fsm_equipment.certificates</field>
       <field name="arch" type="xml">
         <form>
             <grpup>
                 <field name="date"/>
-                <field name="loa"/>
+                <field name="status"/>
                 <field name="certificate_type"/>
                 <field name="raiting"/>
                 <field name="invoice_id"/>
