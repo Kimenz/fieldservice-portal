@@ -28,7 +28,7 @@
                 'l10n_br_base',
                 ],
 
-    # always loaded
+    # always loaded substituir abvo==>fsm_equipment
     'data': [
         'security/fsm_equipment_security.xml',
         'security/ir.model.access.csv',
