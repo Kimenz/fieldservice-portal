@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Abvo",
+    'name': "FieldService Portal",
 
     'summary': """
-        Add Certificates to ABVO Website""",
+        Manage Field Service Location in the Portal""",
 
     'description': """
-        Add Certificates to ABVO Website, manages membership by boat. Manage you local sailing association
+        Show current fsm.location STATUS|EQUIPMENT_LOCATION|EQUIPMENT_STATUS
     """,
 
     'author': "POPSOLUTIONS.CO",
@@ -30,11 +30,11 @@
 
     # always loaded
     'data': [
-        'security/abvo_security.xml',
+        'security/fsm_equipment_security.xml',
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/res_partner_view.xml',
-        'views/abvo_certificates_view.xml',
+        'views/fsm_equipment_certificates_view.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode
